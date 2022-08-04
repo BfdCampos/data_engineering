@@ -1,0 +1,6 @@
+models:
+  - table: table_1
+  - table: table_2
+      join_keys:
+        - key1: key_1
+        - key2: key_2

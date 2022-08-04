@@ -1,0 +1,9 @@
+Config:
+    - name: identity
+      value: 101
+    - name: size
+      value: 201
+    - name: logloc
+      value: /tmp/log
+    - name: host
+      value: xyz.dev.cloud

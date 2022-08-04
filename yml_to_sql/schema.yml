@@ -1,0 +1,142 @@
+version: 2
+
+models:
+  - name: mailchimp_saltpay_cr_campaigns
+    description: Contains all information about a campaign’s settings and metadata
+    columns:
+      - name: ID 
+      - name: TITLE
+      - name: TEMPLATE_ID
+      - name: CREATE_TIME
+      - name: SEND_TIME
+      - name: SUBJECT_LINE
+      - name: PREVIEW_TEXT
+      - name: TYPE
+      - name: STATUS
+      - name: WEB_ID
+      - name: RSS_OPTS
+      - name: RESENDABLE
+      - name: ARCHIVE_URL
+      - name: EMAILS_SENT
+      - name: SOCIAL_CARD
+      - name: CONTENT_TYPE
+      - name: LONG_ARCHIVE_URL
+      - name: VARIATE_SETTINGS
+      - name: PARENT_CAMPAIGN_ID
+      - name: NEEDS_BLOCK_REFRESH
+      - name: TO_NAME
+      - name: REPLY_TO
+      - name: TIMEWARP
+      - name: FOLDER_ID
+      - name: FROM_NAME
+      - name: AUTO_TWEET
+      - name: INLINE_CSS
+      - name: AUTO_FOOTER
+      - name: FB_COMMENTS
+      - name: AUTHENTICATE
+      - name: AUTO_FB_POST
+      - name: DRAG_AND_DROP
+      - name: USE_CONVERSATION
+      - name: TRACKING
+      - name: DELIVERY_STATUS
+      - name: AB_SPLIT_OPTS
+
+  - name: mailchimp_saltpay_cr_campaigns_report_summary
+    description: Contains all the performance metrics of a given campaign
+    columns:
+      - name: CAMPAIGN_ID
+      - name: OPENS
+      - name: CLICKS
+      - name: OPEN_RATE
+      - name: CLICK_RATE
+      - name: UNIQUE_OPENS
+      - name: SUBSCRIBER_CLICKS
+      - name: TOTAL_SPENT
+      - name: TOTAL_ORDERS
+      - name: TOTAL_REVENUE
+
+  - name: mailchimp_saltpay_cr_campaigns_recipients
+    description: Contains all information about the recipients of a given campaign, which mailing list the campaign was sent to and what segment of that mailing list was used to send the given campaign
+    columns:
+      - name: CAMPAIGN_ID
+      - name: LIST_ID
+      - name: LIST_NAME
+      - name: CONTACT_TAG
+        description: Field is created from the SEGMENT_TEXT html field and takes the tag(s) shown in the html value
+        tests:
+          - no_html
+      - name: SEGMENT_TEXT
+      - name: LIST_IS_ACTIVE
+      - name: RECIPIENT_COUNT
+      - name: MATCH
+      - name: SAVED_SEGMENT_ID
+      - name: PREBUILT_SEGMENT_ID
+      - name: SEGMENT_OPS_CONDITION_OP
+      - name: SEGMENT_OPS_CONDITION_FIELD
+      - name: SEGMENT_OPS_CONDITION_VALUE
+      - name: SEGMENT_OPS_CONDITION_TYPE
+
+  - name: mailchimp_saltpay_cr_email_activity
+    description: Contains the fine details of how each user interacted with each campaign and which mailing list are they in
+    columns:
+      - name: CAMPAIGN_ID
+      - name: EMAIL_ID
+      - name: EMAIL_ADDRESS
+      - name: IP
+      - name: ACTION
+      - name: TIMESTAMP
+      - name: LIST_ID
+      - name: LIST_IS_ACTIVE
+      - name: URL
+      - name: TYPE
+
+  - name: mailchimp_saltpay_cr_lists
+    description: Contains all the information of defined mailing lists plus the mailing list's success metrics
+    columns:
+      - name: ID
+      - name: NAME
+      - name: WEB_ID
+      - name: MODULES
+      - name: VISIBILITY
+      - name: HAS_WELCOME
+      - name: LIST_RATING
+      - name: DATE_CREATED
+      - name: DOUBLE_OPTIN
+      - name: BEAMER_ADDRESS
+      - name: USE_ARCHIVE_BAR
+      - name: EMAIL_TYPE_OPTION
+      - name: SUBSCRIBE_URL_LONG
+      - name: NOTIFY_ON_SUBSCRIBE
+      - name: PERMISSION_REMINDER
+      - name: SUBSCRIBE_URL_SHORT
+      - name: MARKETING_PERMISSIONS
+      - name: NOTIFY_ON_UNSUBSCRIBE
+      - name: OPEN_RATE
+      - name: CLICK_RATE
+      - name: AVG_SUB_RATE
+      - name: MEMBER_COUNT
+      - name: CLEANED_COUNT
+      - name: AVG_UNSUB_RATE
+      - name: CAMPAIGN_COUNT
+      - name: TOTAL_CONTACTS
+      - name: TARGET_SUB_RATE
+      - name: MERGE_FIELD_COUNT
+      - name: UNSUBSCRIBE_COUNT
+      - name: MEMBER_COUNT_SINCE_SEND
+      - name: CLEANED_COUNT_SINCE_SEND
+      - name: UNSUBSCRIBE_COUNT_SINCE_SEND
+      - name: SUBJECT
+      - name: LANGUAGE
+      - name: FROM_NAME
+      - name: FROM_EMAIL
+      - name: LAST_SUB_DATE
+      - name: LAST_UNSUB_DATE
+      - name: CAMPAIGN_LAST_SENT
+      - name: CONTACT_ZIP
+      - name: CONTACT_CITY
+      - name: CONTACT_PHONE
+      - name: CONTACT_STATE
+      - name: CONTACT_COMPANY
+      - name: CONTACT_COUNTRY
+      - name: CONTACT_ADDRESS1
+      - name: CONTACT_ADDRESS2
