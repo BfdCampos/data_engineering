@@ -1,0 +1,15 @@
+, "line_items"[seq.id]:"gtin" AS LINE_ITEMS_GTIN
+, "line_items"[seq.id]:"id" AS LINE_ITEMS_ID
+, "line_items"[seq.id]:"line_attributes"."name" AS LINE_ITEMS_LINE_ATTRIBUTES_NAME 
+, "line_items"[seq.id]:"line_attributes"."value" AS LINE_ITEMS_LINE_ATTRIBUTES_VALUE
+, "line_items"[seq.id]:"line_discounts"."gross" AS LINE_ITEMS_LINE_DISCOUNTS_GROSS 
+, "line_items"[seq.id]:"line_discounts"."net" AS LINE_ITEMS_LINE_DISCOUNTS_NET
+, "line_items"[seq.id]:"line_discounts"."tax" AS LINE_ITEMS_LINE_DISCOUNTS_TAX
+, "line_items":"line_discounts"."tax_rate" AS LINE_ITEMS_LINE_DISCOUNTS_TAX_RATE
+, "line_items"[seq.id]:"line_price"."gross" AS LINE_ITEMS_LINE_PRICE_GROSS
+, "line_items":"line_price"."net" AS LINE_ITEMS_LINE_PRICE_NET
+, "line_items"[seq.id]:"line_price"."tax" AS LINE_ITEMS_LINE_PRICE_TAX
+, "line_items"[seq.id]:"line_price"."tax_rate" AS LINE_ITEMS_LINE_PRICE_TAX_RATE
+, "line_items"[seq.id]:"name" AS LINE_ITEMS_NAME
+, "line_items"[seq.id]:"quantity" AS LINE_ITEMS_QUANTITY
+, "line_items"[seq.id]:"quantity_u nit" AS LINE_ITEMS_QUANTITY_UNIT

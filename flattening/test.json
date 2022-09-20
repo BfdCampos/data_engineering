@@ -1,0 +1,24 @@
+{
+  "gtin": null,
+  "id": "003",
+  "line_attributes": {
+    "name": "",
+    "value": ""
+  },
+  "line_discounts": {
+    "gross": 0,
+    "net": 0,
+    "tax": 0,
+    "tax_rate": 0
+  },
+  "line_modifiers": [],
+  "line_price": {
+    "gross": 45,
+    "net": 8.11,
+    "tax": 8.11,
+    "tax_rate": 22
+  },
+  "name": "TOMME TEEPPEE MANGIAPANNOLINI ",
+  "quantity": 1,
+  "quantity_unit": "unit"
+}
