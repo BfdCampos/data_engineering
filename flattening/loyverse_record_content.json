@@ -1,0 +1,59 @@
+{
+  "cancelled_at": null,
+  "created_at": "2022-10-20T10:33:36.000Z",
+  "currency": "THB",
+  "dining_option": null,
+  "line_items": [
+    {
+      "cost": 0,
+      "cost_total": 0,
+      "gross_total_money": 80,
+      "id": "9553152a-9d9f-f947-f6a3-2ab6eb53516c",
+      "item_id": "054f0c8e-39c2-40e0-9dbe-f4d0aa7f6bed",
+      "item_name": "ชานมใต้หวัน",
+      "line_discounts": [],
+      "line_modifiers": [],
+      "line_note": null,
+      "line_taxes": [],
+      "price": 20,
+      "quantity": 4,
+      "sku": "10000",
+      "total_discount": 0,
+      "total_money": 80,
+      "variant_id": "7ba07bb8-fb8b-4410-a31a-418ee0fba23b",
+      "variant_name": null
+    }
+  ],
+  "merchant_country": "TH",
+  "merchant_id": "a37d0c16-b85e-40dc-a4c0-40f10f0feec9",
+  "note": null,
+  "order": null,
+  "payments": [
+    {
+      "money_amount": 80,
+      "name": "เงินสด",
+      "paid_at": "2022-10-20T10:33:32.000Z",
+      "payment_details": null,
+      "payment_type_id": "44f129e0-1bc4-4bc7-8aff-522ed2a23b4a",
+      "type": "CASH"
+    }
+  ],
+  "points_balance": 0,
+  "points_deducted": 0,
+  "points_earned": 0,
+  "pos_device_id": "f2abcade-43fc-4403-8497-fad9ffee55fc",
+  "receipt_date": "2022-10-20T10:33:32.000Z",
+  "receipt_number": "1-5673",
+  "receipt_type": "SALE",
+  "refund_for": null,
+  "source": "point of sale",
+  "store_id": "fb59c5ba-585c-4dfe-84c2-df2e87b1c062",
+  "surcharge": 0,
+  "tip": 0,
+  "total_discount": 0,
+  "total_discounts": [],
+  "total_money": 80,
+  "total_tax": 0,
+  "total_taxes": [],
+  "updated_at": "2022-10-20T10:33:36.000Z"
+}

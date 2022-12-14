@@ -1,0 +1,11 @@
+{
+  "CreateTime": 1666335230390,
+  "key": {
+    "schema_key": "ent-loyverse_receipt-v1",
+    "service_access_id": "45aa3917-56ac-43c1-8c29-44a8cb311d5a",
+    "timestamp": 1666335230
+  },
+  "offset": 434173,
+  "partition": 3,
+  "topic": "saltdata-platform-hyrule-byod-ent-loyverse-receipt-v1"
+}

@@ -1,0 +1,59 @@
+{
+  "basket_additional_charge": {
+    "additional_charge_price": {
+      "gross": 0,
+      "net": 0,
+      "tax": 0,
+      "tax_rate": 0
+    },
+    "type": "SERVICE"
+  },
+  "basket_discount": {
+    "gross": 0.6344,
+    "net": 0.52,
+    "tax": 0.1144,
+    "tax_rate": 22
+  },
+  "basket_source_name": "stamp",
+  "basket_source_original_id": "67611fcc-fd5e-f7bd-b157-cb89c9e9fa50",
+  "created_at": "11/11/2022 10:57:03 AM +00:00",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "gtin": null,
+      "id": "MICK 6075",
+      "line_attributes": {
+        "name": "",
+        "value": ""
+      },
+      "line_discounts": {
+        "gross": 0,
+        "net": 0,
+        "tax": 0,
+        "tax_rate": 0
+      },
+      "line_modifiers": [],
+      "line_price": {
+        "gross": 230,
+        "net": 41.48,
+        "tax": 41.48,
+        "tax_rate": 22
+      },
+      "name": "SCARPE PREMIATA",
+      "quantity": 1,
+      "quantity_unit": "unit"
+    }
+  ],
+  "salt_consumer_id": null,
+  "salt_merchant_employee_id": "00000000-0000-0000-0000-000000000000",
+  "salt_payment_transaction_id": null,
+  "salt_store_id": "86c891c2-1f9e-40b2-8b84-50591b0fb016",
+  "status": "cancelled",
+  "total_to_pay": {
+    "gross": 229.3656,
+    "net": 188,
+    "tax": 41.3656,
+    "tax_rate": 0
+  },
+  "updated_at": null
+}

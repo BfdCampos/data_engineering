@@ -1,0 +1,11 @@
+{
+  "CreateTime": 1668626961729,
+  "key": {
+    "schema_key": "ent-basket_data-v3",
+    "service_access_id": "faa8172b-7364-41b0-a707-26f9f820ac1e",
+    "timestamp": 1668626961
+  },
+  "offset": 0,
+  "partition": 1,
+  "topic": "saltdata-platform-hyrule-byod-ent-basket-data-v3"
+}

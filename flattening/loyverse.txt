@@ -1,0 +1,90 @@
+"record_content":"cancelled_at" AS CANCELLED_AT
+, "record_content":"created_at" AS CREATED_AT
+, "record_content":"currency" AS CURRENCY
+, "record_content":"dining_option" AS DINING_OPTION
+, "record_content":"line_items"[seq.id]."cost" AS LINE_ITEMS_COST
+, "record_content":"line_items"[seq.id]."cost_total" AS LINE_ITEMS_COST_TOTAL
+, "record_content":"line_items"[seq.id]."gross_total_money" AS LINE_ITEMS_GROSS_TOTAL_MONEY
+, "record_content":"line_items"[seq.id]."id" AS LINE_ITEMS_ID
+, "record_content":"line_items"[seq.id]."item_id" AS LINE_ITEMS_ITEM_ID
+, "record_content":"line_items"[seq.id]."item_name" AS LINE_ITEMS_ITEM_NAME
+, "record_content":"line_items"[seq.id]."line_note" AS LINE_ITEMS_LINE_NOTE
+, "record_content":"line_items"[seq.id]."price" AS LINE_ITEMS_PRICE
+, "record_content":"line_items"[seq.id]."quantity" AS LINE_ITEMS_QUANTITY
+, "record_content":"line_items"[seq.id]."sku" AS LINE_ITEMS_SKU
+, "record_content":"line_items"[seq.id]."total_discount" AS LINE_ITEMS_TOTAL_DISCOUNT
+, "record_content":"line_items"[seq.id]."total_money" AS LINE_ITEMS_TOTAL_MONEY
+, "record_content":"line_items"[seq.id]."variant_id" AS LINE_ITEMS_VARIANT_ID
+, "record_content":"line_items"[seq.id]."variant_name" AS LINE_ITEMS_VARIANT_NAME
+, "record_content":"merchant_country" AS MERCHANT_COUNTRY
+, "record_content":"merchant_id" AS MERCHANT_ID
+, "record_content":"note" AS NOTE
+, "record_content":"order" AS ORDER
+, "record_content":"payments"[seq.id]."money_amount" AS PAYMENTS_MONEY_AMOUNT
+, "record_content":"payments"[seq.id]."name" AS PAYMENTS_NAME
+, "record_content":"payments"[seq.id]."paid_at" AS PAYMENTS_PAID_AT
+, "record_content":"payments"[seq.id]."payment_details" AS PAYMENTS_PAYMENT_DETAILS
+, "record_content":"payments"[seq.id]."payment_type_id" AS PAYMENTS_PAYMENT_TYPE_ID
+, "record_content":"payments"[seq.id]."type" AS PAYMENTS_TYPE
+, "record_content":"points_balance" AS POINTS_BALANCE
+, "record_content":"points_deducted" AS POINTS_DEDUCTED
+, "record_content":"points_earned" AS POINTS_EARNED
+, "record_content":"pos_device_id" AS POS_DEVICE_ID
+, "record_content":"receipt_date" AS RECEIPT_DATE
+, "record_content":"receipt_number" AS RECEIPT_NUMBER
+, "record_content":"receipt_type" AS RECEIPT_TYPE
+, "record_content":"refund_for" AS REFUND_FOR
+, "record_content":"source" AS SOURCE
+, "record_content":"store_id" AS STORE_ID
+, "record_content":"surcharge" AS SURCHARGE
+, "record_content":"tip" AS TIP
+, "record_content":"total_discount" AS TOTAL_DISCOUNT
+, "record_content":"total_money" AS TOTAL_MONEY
+, "record_content":"total_tax" AS TOTAL_TAX
+, "record_content":"updated_at" AS UPDATED_AT
+, "record_metadata":"CreateTime" AS METADATA_CREATETIME
+, "record_metadata":"key"."schema_key" AS METADATA_KEY_SCHEMA_KEY
+, "record_metadata":"key"."service_access_id" AS METADATA_KEY_SERVICE_ACCESS_ID
+, "record_metadata":"key"."timestamp" AS METADATA_KEY_TIMESTAMP
+, "record_metadata":"offset" AS METADATA_OFFSET
+, "record_metadata":"partition" AS METADATA_PARTITION
+, "record_metadata":"topic" AS METADATA_TOPIC
+
+--------------------- ########################################################## Actual Query ################################################################# --------------------------
+
+SELECT
+	"RECORD_CONTENT":"cancelled_at"::string AS CANCELLED_AT
+	, "RECORD_CONTENT":"created_at"::string AS CREATED_AT
+	, "RECORD_CONTENT":"currency"::string AS CURRENCY
+	, "RECORD_CONTENT":"dining_option"::string AS DINING_OPTION
+	, "RECORD_CONTENT":"line_items"::string AS LINE_ITEMS
+	, "RECORD_CONTENT":"merchant_country"::string AS MERCHANT_COUNTRY
+	, "RECORD_CONTENT":"merchant_id"::string AS MERCHANT_ID
+	, "RECORD_CONTENT":"note"::string AS NOTE
+	, "RECORD_CONTENT":"order"::string AS "ORDER"
+	, "RECORD_CONTENT":"payments"::string AS PAYMENTS
+	, "RECORD_CONTENT":"points_balance"::string AS POINTS_BALANCE
+	, "RECORD_CONTENT":"points_deducted"::string AS POINTS_DEDUCTED
+	, "RECORD_CONTENT":"points_earned"::string AS POINTS_EARNED
+	, "RECORD_CONTENT":"pos_device_id"::string AS POS_DEVICE_ID
+	, "RECORD_CONTENT":"receipt_date"::string AS RECEIPT_DATE
+	, "RECORD_CONTENT":"receipt_number"::string AS RECEIPT_NUMBER
+	, "RECORD_CONTENT":"receipt_type"::string AS RECEIPT_TYPE
+	, "RECORD_CONTENT":"refund_for"::string AS REFUND_FOR
+	, "RECORD_CONTENT":"source"::string AS "SOURCE"
+	, "RECORD_CONTENT":"store_id"::string AS STORE_ID
+	, "RECORD_CONTENT":"surcharge"::string AS SURCHARGE
+	, "RECORD_CONTENT":"tip"::string AS TIP
+	, "RECORD_CONTENT":"total_discount"::string AS TOTAL_DISCOUNT
+	, "RECORD_CONTENT":"total_money"::string AS TOTAL_MONEY
+	, "RECORD_CONTENT":"total_tax"::string AS TOTAL_TAX
+	, "RECORD_CONTENT":"updated_at"::string AS UPDATED_AT
+	, "RECORD_METADATA":"CreateTime"::string AS METADATA_CREATETIME
+	, "RECORD_METADATA":"key"."schema_key"::string AS METADATA_KEY_SCHEMA_KEY
+	, "RECORD_METADATA":"key"."service_access_id"::string AS SERVICE_ACCESS_ID
+	, "RECORD_METADATA":"key"."timestamp"::string AS METADATA_KEY_TIMESTAMP
+	, "RECORD_METADATA":"offset"::string AS METADATA_OFFSET
+	, "RECORD_METADATA":"partition"::string AS METADATA_PARTITION
+	, "RECORD_METADATA":"topic"::string AS METADATA_TOPIC
+FROM
+	PRD.LANDING.KAFKA_CONNECT_BYOD__ENT_LOYVERSE_RECEIPT_V1 
