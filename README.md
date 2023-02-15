@@ -1,2 +1,2 @@
 # data_engineering
-A Repo for me to practice data_engineering tasks
+A Repo for my data_engineering tasks
