@@ -1,0 +1,104 @@
+[2023-03-06T04:21:06.540+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:871: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti: TaskInstance | None = qry.with_for_update().one_or_none()
+
+[2023-03-06T04:21:06.547+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dbt_marts_loyverse_models.loyverse_models_payments.test scheduled__2023-03-05T04:20:00+00:00 [queued]>
+[2023-03-06T04:21:06.555+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dbt_marts_loyverse_models.loyverse_models_payments.test scheduled__2023-03-05T04:20:00+00:00 [queued]>
+[2023-03-06T04:21:06.556+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-06T04:21:06.556+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-03-06T04:21:06.556+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-06T04:21:06.570+0000] {taskinstance.py:1383} INFO - Executing <Task(DbtTestOperator): loyverse_models_payments.test> on 2023-03-05 04:20:00+00:00
+[2023-03-06T04:21:06.579+0000] {standard_task_runner.py:54} INFO - Started process 309168 to run task
+[2023-03-06T04:21:06.583+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_marts_loyverse_models', 'loyverse_models_payments.test', 'scheduled__2023-03-05T04:20:00+00:00', '--job-id', '1673766', '--raw', '--subdir', 'DAGS_FOLDER/engineering/dbt/dbt_marts_loyverse_models.py', '--cfg-path', '/tmp/tmpd9jgp82g']
+[2023-03-06T04:21:06.583+0000] {standard_task_runner.py:83} INFO - Job 1673766: Subtask loyverse_models_payments.test
+[2023-03-06T04:21:06.584+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/engineering/dbt/dbt_marts_loyverse_models.py
+[2023-03-06T04:21:06.595+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/hooks/dbt_hook.py:7: DeprecationWarning: The `airflow.hooks.base_hook.BaseHook` class is deprecated. Please use `'airflow.hooks.base.BaseHook'`.
+  from airflow.hooks.base_hook import BaseHook
+
+[2023-03-06T04:21:06.596+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/operators/dbt_operator.py:6: RemovedInAirflow3Warning: This decorator is deprecated. 
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the `default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+
+  class DbtBaseOperator(BaseOperator):
+
+[2023-03-06T04:21:06.596+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/operators/__init__.py:1: RemovedInAirflow3Warning: This decorator is deprecated. 
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the `default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+
+  from .dbt_operator import (
+
+[2023-03-06T04:21:06.599+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py:3393: RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead. 
+  with DAG(
+
+[2023-03-06T04:21:06.711+0000] {task_command.py:384} INFO - Running <TaskInstance: dbt_marts_loyverse_models.loyverse_models_payments.test scheduled__2023-03-05T04:20:00+00:00 [running]> on host saltdata-platform-airflow-data-prd-eu-west-1-worker-68b997l7976
+[2023-03-06T04:21:06.715+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:873: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti = qry.one_or_none()
+
+[2023-03-06T04:21:06.791+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=AnalyticsEngineers
+AIRFLOW_CTX_DAG_ID=dbt_marts_loyverse_models
+AIRFLOW_CTX_TASK_ID=loyverse_models_payments.test
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-05T04:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-05T04:20:00+00:00
+[2023-03-06T04:21:06.791+0000] {dbt_hook.py:128} INFO - /home/airflow/.local/bin/dbt test --profiles-dir /opt/airflow/dags/artifacts/dbt/profiles --models loyverse_models_payments
+[2023-03-06T04:21:06.810+0000] {dbt_hook.py:138} INFO - Output:
+[2023-03-06T04:21:09.742+0000] {dbt_hook.py:142} INFO - [0m04:21:09  Running with dbt=1.2.4
+[2023-03-06T04:21:11.289+0000] {dbt_hook.py:142} INFO - [0m04:21:11  Found 2151 models, 949 tests, 0 snapshots, 0 analyses, 285 macros, 1 operation, 0 seed files, 1836 sources, 0 exposures, 0 metrics
+[2023-03-06T04:21:11.368+0000] {dbt_hook.py:142} INFO - [0m04:21:11
+[2023-03-06T04:21:11.673+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:873: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti = qry.one_or_none()
+
+[2023-03-06T04:21:14.192+0000] {dbt_hook.py:142} INFO - [0m04:21:14
+[2023-03-06T04:21:14.192+0000] {dbt_hook.py:142} INFO - [0m04:21:14  Running 1 on-run-start hook
+[2023-03-06T04:21:14.197+0000] {dbt_hook.py:142} INFO - [0m04:21:14  1 of 1 START hook: saltdata_dbt.on-run-start.0 ................................. [RUN]
+[2023-03-06T04:21:14.559+0000] {dbt_hook.py:142} INFO - [0m04:21:14  1 of 1 OK hook: saltdata_dbt.on-run-start.0 .................................... [[32mSUCCESS 1[0m in 0.36s]
+[2023-03-06T04:21:14.560+0000] {dbt_hook.py:142} INFO - [0m04:21:14
+[2023-03-06T04:21:14.605+0000] {dbt_hook.py:142} INFO - [0m04:21:14  Concurrency: 4 threads (target='prd')
+[2023-03-06T04:21:14.605+0000] {dbt_hook.py:142} INFO - [0m04:21:14
+[2023-03-06T04:21:14.621+0000] {dbt_hook.py:142} INFO - [0m04:21:14  1 of 14 START test accepted_values_loyverse_models_payments_RECEIPT_TYPE__SALE__REFUND  [RUN]
+[2023-03-06T04:21:14.622+0000] {dbt_hook.py:142} INFO - [0m04:21:14  2 of 14 START test entry_length_loyverse_models_payments_MERCHANT_ID__36 ....... [RUN]
+[2023-03-06T04:21:14.623+0000] {dbt_hook.py:142} INFO - [0m04:21:14  3 of 14 START test is_updated_loyverse_models_payments_UPDATED_AT .............. [RUN]
+[2023-03-06T04:21:14.623+0000] {dbt_hook.py:142} INFO - [0m04:21:14  4 of 14 START test no_future_loyverse_models_payments_CREATED_AT ............... [RUN]
+[2023-03-06T04:21:19.478+0000] {dbt_hook.py:142} INFO - [0m04:21:19  1 of 14 PASS accepted_values_loyverse_models_payments_RECEIPT_TYPE__SALE__REFUND  [[32mPASS[0m in 4.86s]
+[2023-03-06T04:21:19.479+0000] {dbt_hook.py:142} INFO - [0m04:21:19  5 of 14 START test not_null_loyverse_models_payments_CREATED_AT ................ [RUN]
+[2023-03-06T04:21:19.902+0000] {dbt_hook.py:142} INFO - [0m04:21:19  5 of 14 PASS not_null_loyverse_models_payments_CREATED_AT ...................... [[32mPASS[0m in 0.42s]
+[2023-03-06T04:21:19.903+0000] {dbt_hook.py:142} INFO - [0m04:21:19  6 of 14 START test not_null_loyverse_models_payments_CURRENCY .................. [RUN]
+[2023-03-06T04:21:20.295+0000] {dbt_hook.py:142} INFO - [0m04:21:20  6 of 14 PASS not_null_loyverse_models_payments_CURRENCY ........................ [[32mPASS[0m in 0.39s]
+[2023-03-06T04:21:20.296+0000] {dbt_hook.py:142} INFO - [0m04:21:20  7 of 14 START test not_null_loyverse_models_payments_MERCHANT_COUNTRY .......... [RUN]
+[2023-03-06T04:21:20.732+0000] {dbt_hook.py:142} INFO - [0m04:21:20  7 of 14 PASS not_null_loyverse_models_payments_MERCHANT_COUNTRY ................ [[32mPASS[0m in 0.44s]
+[2023-03-06T04:21:20.733+0000] {dbt_hook.py:142} INFO - [0m04:21:20  8 of 14 START test not_null_loyverse_models_payments_MERCHANT_ID ............... [RUN]
+[2023-03-06T04:21:21.146+0000] {dbt_hook.py:142} INFO - [0m04:21:21  8 of 14 PASS not_null_loyverse_models_payments_MERCHANT_ID ..................... [[32mPASS[0m in 0.41s]
+[2023-03-06T04:21:21.146+0000] {dbt_hook.py:142} INFO - [0m04:21:21  9 of 14 START test not_null_loyverse_models_payments_PAYMENTS_TYPE ............. [RUN]
+[2023-03-06T04:21:21.414+0000] {dbt_hook.py:142} INFO - [0m04:21:21  2 of 14 PASS entry_length_loyverse_models_payments_MERCHANT_ID__36 ............. [[32mPASS[0m in 6.79s]
+[2023-03-06T04:21:21.414+0000] {dbt_hook.py:142} INFO - [0m04:21:21  10 of 14 START test not_null_loyverse_models_payments_RECEIPT_AMOUNT ........... [RUN]
+[2023-03-06T04:21:21.658+0000] {dbt_hook.py:142} INFO - [0m04:21:21  9 of 14 PASS not_null_loyverse_models_payments_PAYMENTS_TYPE ................... [[32mPASS[0m in 0.51s]
+[2023-03-06T04:21:21.658+0000] {dbt_hook.py:142} INFO - [0m04:21:21  11 of 14 START test not_null_loyverse_models_payments_RECEIPT_NUMBER ........... [RUN]
+[2023-03-06T04:21:21.915+0000] {dbt_hook.py:142} INFO - [0m04:21:21  10 of 14 PASS not_null_loyverse_models_payments_RECEIPT_AMOUNT ................. [[32mPASS[0m in 0.50s]
+[2023-03-06T04:21:21.916+0000] {dbt_hook.py:142} INFO - [0m04:21:21  12 of 14 START test not_null_loyverse_models_payments_RECEIPT_TYPE ............. [RUN]
+[2023-03-06T04:21:22.160+0000] {dbt_hook.py:142} INFO - [0m04:21:22  11 of 14 PASS not_null_loyverse_models_payments_RECEIPT_NUMBER ................. [[32mPASS[0m in 0.50s]
+[2023-03-06T04:21:22.161+0000] {dbt_hook.py:142} INFO - [0m04:21:22  13 of 14 START test not_null_loyverse_models_payments_STORE_ID ................. [RUN]
+[2023-03-06T04:21:22.404+0000] {dbt_hook.py:142} INFO - [0m04:21:22  12 of 14 PASS not_null_loyverse_models_payments_RECEIPT_TYPE ................... [[32mPASS[0m in 0.49s]
+[2023-03-06T04:21:22.404+0000] {dbt_hook.py:142} INFO - [0m04:21:22  14 of 14 START test unique_loyverse_models_payments__MERCHANT_ID_RECEIPT_NUMBER_PAYMENTS_TYPE_  [RUN]
+[2023-03-06T04:21:22.687+0000] {dbt_hook.py:142} INFO - [0m04:21:22  13 of 14 PASS not_null_loyverse_models_payments_STORE_ID ....................... [[32mPASS[0m in 0.53s]
+[2023-03-06T04:21:24.071+0000] {dbt_hook.py:142} INFO - [0m04:21:24  3 of 14 PASS is_updated_loyverse_models_payments_UPDATED_AT .................... [[32mPASS[0m in 9.45s]
+[2023-03-06T04:21:27.232+0000] {dbt_hook.py:142} INFO - [0m04:21:27  4 of 14 PASS no_future_loyverse_models_payments_CREATED_AT ..................... [[32mPASS[0m in 12.61s]
+[2023-03-06T04:21:59.646+0000] {dbt_hook.py:142} INFO - [0m04:21:59  14 of 14 PASS unique_loyverse_models_payments__MERCHANT_ID_RECEIPT_NUMBER_PAYMENTS_TYPE_  [[32mPASS[0m in 37.24s]
+[2023-03-06T04:21:59.648+0000] {dbt_hook.py:142} INFO - [0m04:21:59
+[2023-03-06T04:21:59.648+0000] {dbt_hook.py:142} INFO - [0m04:21:59  Finished running 14 tests, 1 hook in 0 hours 0 minutes and 48.28 seconds (48.28s).
+[2023-03-06T04:21:59.649+0000] {dbt_hook.py:142} INFO - [0m04:21:59
+[2023-03-06T04:21:59.649+0000] {dbt_hook.py:142} INFO - [0m04:21:59  [32mCompleted successfully[0m
+[2023-03-06T04:21:59.649+0000] {dbt_hook.py:142} INFO - [0m04:21:59
+[2023-03-06T04:21:59.649+0000] {dbt_hook.py:142} INFO - [0m04:21:59  Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+[2023-03-06T04:22:00.268+0000] {dbt_hook.py:144} INFO - Command exited with return code 0
+[2023-03-06T04:22:00.283+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:871: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti: TaskInstance | None = qry.with_for_update().one_or_none()
+
+[2023-03-06T04:22:00.290+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=dbt_marts_loyverse_models, task_id=loyverse_models_payments.test, execution_date=20230305T042000, start_date=20230306T042106, end_date=20230306T042200
+[2023-03-06T04:22:00.363+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-03-06T04:22:00.402+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

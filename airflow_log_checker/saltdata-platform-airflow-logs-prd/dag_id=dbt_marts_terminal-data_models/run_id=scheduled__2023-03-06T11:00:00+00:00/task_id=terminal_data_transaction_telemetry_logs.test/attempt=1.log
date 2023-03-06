@@ -1,0 +1,84 @@
+[2023-03-06T12:01:31.441+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:871: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti: TaskInstance | None = qry.with_for_update().one_or_none()
+
+[2023-03-06T12:01:31.460+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dbt_marts_terminal-data_models.terminal_data_transaction_telemetry_logs.test scheduled__2023-03-06T11:00:00+00:00 [queued]>
+[2023-03-06T12:01:31.477+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dbt_marts_terminal-data_models.terminal_data_transaction_telemetry_logs.test scheduled__2023-03-06T11:00:00+00:00 [queued]>
+[2023-03-06T12:01:31.477+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-06T12:01:31.477+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-03-06T12:01:31.477+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-06T12:01:31.735+0000] {taskinstance.py:1383} INFO - Executing <Task(DbtTestOperator): terminal_data_transaction_telemetry_logs.test> on 2023-03-06 11:00:00+00:00
+[2023-03-06T12:01:31.750+0000] {standard_task_runner.py:54} INFO - Started process 325297 to run task
+[2023-03-06T12:01:31.755+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_marts_terminal-data_models', 'terminal_data_transaction_telemetry_logs.test', 'scheduled__2023-03-06T11:00:00+00:00', '--job-id', '1676932', '--raw', '--subdir', 'DAGS_FOLDER/engineering/dbt/dbt_marts_terminal-data_models.py', '--cfg-path', '/tmp/tmpaozy181s']
+[2023-03-06T12:01:31.755+0000] {standard_task_runner.py:83} INFO - Job 1676932: Subtask terminal_data_transaction_telemetry_logs.test
+[2023-03-06T12:01:31.756+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/engineering/dbt/dbt_marts_terminal-data_models.py
+[2023-03-06T12:01:31.773+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/hooks/dbt_hook.py:7: DeprecationWarning: The `airflow.hooks.base_hook.BaseHook` class is deprecated. Please use `'airflow.hooks.base.BaseHook'`.
+  from airflow.hooks.base_hook import BaseHook
+
+[2023-03-06T12:01:31.774+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/operators/dbt_operator.py:6: RemovedInAirflow3Warning: This decorator is deprecated. 
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the `default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+
+  class DbtBaseOperator(BaseOperator):
+
+[2023-03-06T12:01:31.775+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/operators/__init__.py:1: RemovedInAirflow3Warning: This decorator is deprecated. 
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the `default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+
+  from .dbt_operator import (
+
+[2023-03-06T12:01:31.779+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py:3393: RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead. 
+  with DAG(
+
+[2023-03-06T12:01:32.349+0000] {task_command.py:384} INFO - Running <TaskInstance: dbt_marts_terminal-data_models.terminal_data_transaction_telemetry_logs.test scheduled__2023-03-06T11:00:00+00:00 [running]> on host saltdata-platform-airflow-data-prd-eu-west-1-worker-68b997l7976
+[2023-03-06T12:01:32.351+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:873: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti = qry.one_or_none()
+
+[2023-03-06T12:01:32.460+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=AnalyticsEngineers
+AIRFLOW_CTX_DAG_ID=dbt_marts_terminal-data_models
+AIRFLOW_CTX_TASK_ID=terminal_data_transaction_telemetry_logs.test
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-06T11:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-06T11:00:00+00:00
+[2023-03-06T12:01:32.461+0000] {dbt_hook.py:128} INFO - /home/airflow/.local/bin/dbt test --profiles-dir /opt/airflow/dags/artifacts/dbt/profiles --models terminal_data_transaction_telemetry_logs
+[2023-03-06T12:01:32.487+0000] {dbt_hook.py:138} INFO - Output:
+[2023-03-06T12:01:36.862+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:873: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti = qry.one_or_none()
+
+[2023-03-06T12:01:36.947+0000] {dbt_hook.py:142} INFO - [0m12:01:36  Running with dbt=1.2.4
+[2023-03-06T12:01:39.879+0000] {dbt_hook.py:142} INFO - [0m12:01:39  Found 2151 models, 949 tests, 0 snapshots, 0 analyses, 285 macros, 1 operation, 0 seed files, 1836 sources, 0 exposures, 0 metrics
+[2023-03-06T12:01:40.033+0000] {dbt_hook.py:142} INFO - [0m12:01:40
+[2023-03-06T12:01:44.634+0000] {dbt_hook.py:142} INFO - [0m12:01:44
+[2023-03-06T12:01:44.635+0000] {dbt_hook.py:142} INFO - [0m12:01:44  Running 1 on-run-start hook
+[2023-03-06T12:01:44.643+0000] {dbt_hook.py:142} INFO - [0m12:01:44  1 of 1 START hook: saltdata_dbt.on-run-start.0 ................................. [RUN]
+[2023-03-06T12:01:45.189+0000] {dbt_hook.py:142} INFO - [0m12:01:45  1 of 1 OK hook: saltdata_dbt.on-run-start.0 .................................... [[32mSUCCESS 1[0m in 0.54s]
+[2023-03-06T12:01:45.189+0000] {dbt_hook.py:142} INFO - [0m12:01:45
+[2023-03-06T12:01:45.268+0000] {dbt_hook.py:142} INFO - [0m12:01:45  Concurrency: 4 threads (target='prd')
+[2023-03-06T12:01:45.268+0000] {dbt_hook.py:142} INFO - [0m12:01:45
+[2023-03-06T12:01:45.303+0000] {dbt_hook.py:142} INFO - [0m12:01:45  2 of 4 START test no_future_terminal_data_transaction_telemetry_logs_log_timestamp  [RUN]
+[2023-03-06T12:01:45.304+0000] {dbt_hook.py:142} INFO - [0m12:01:45  4 of 4 START test positive_terminal_data_transaction_telemetry_logs_transaction_amount  [RUN]
+[2023-03-06T12:01:45.305+0000] {dbt_hook.py:142} INFO - [0m12:01:45  3 of 4 START test not_null_terminal_data_transaction_telemetry_logs_log_timestamp  [RUN]
+[2023-03-06T12:01:45.306+0000] {dbt_hook.py:142} INFO - [0m12:01:45  1 of 4 START test is_updated_terminal_data_transaction_telemetry_logs_log_timestamp  [RUN]
+[2023-03-06T12:01:46.926+0000] {dbt_hook.py:142} INFO - [0m12:01:46  3 of 4 PASS not_null_terminal_data_transaction_telemetry_logs_log_timestamp .... [[32mPASS[0m in 1.62s]
+[2023-03-06T12:01:46.987+0000] {dbt_hook.py:142} INFO - [0m12:01:46  2 of 4 PASS no_future_terminal_data_transaction_telemetry_logs_log_timestamp ... [[32mPASS[0m in 1.68s]
+[2023-03-06T12:01:47.059+0000] {dbt_hook.py:142} INFO - [0m12:01:47  4 of 4 PASS positive_terminal_data_transaction_telemetry_logs_transaction_amount  [[32mPASS[0m in 1.75s]
+[2023-03-06T12:01:47.075+0000] {dbt_hook.py:142} INFO - [0m12:01:47  1 of 4 PASS is_updated_terminal_data_transaction_telemetry_logs_log_timestamp .. [[32mPASS[0m in 1.76s]
+[2023-03-06T12:01:47.079+0000] {dbt_hook.py:142} INFO - [0m12:01:47
+[2023-03-06T12:01:47.080+0000] {dbt_hook.py:142} INFO - [0m12:01:47  Finished running 4 tests, 1 hook in 0 hours 0 minutes and 7.05 seconds (7.05s).
+[2023-03-06T12:01:47.080+0000] {dbt_hook.py:142} INFO - [0m12:01:47
+[2023-03-06T12:01:47.080+0000] {dbt_hook.py:142} INFO - [0m12:01:47  [32mCompleted successfully[0m
+[2023-03-06T12:01:47.081+0000] {dbt_hook.py:142} INFO - [0m12:01:47
+[2023-03-06T12:01:47.081+0000] {dbt_hook.py:142} INFO - [0m12:01:47  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[2023-03-06T12:01:47.753+0000] {dbt_hook.py:144} INFO - Command exited with return code 0
+[2023-03-06T12:01:47.765+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:871: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti: TaskInstance | None = qry.with_for_update().one_or_none()
+
+[2023-03-06T12:01:47.771+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=dbt_marts_terminal-data_models, task_id=terminal_data_transaction_telemetry_logs.test, execution_date=20230306T110000, start_date=20230306T120131, end_date=20230306T120147
+[2023-03-06T12:01:47.857+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-03-06T12:01:47.890+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

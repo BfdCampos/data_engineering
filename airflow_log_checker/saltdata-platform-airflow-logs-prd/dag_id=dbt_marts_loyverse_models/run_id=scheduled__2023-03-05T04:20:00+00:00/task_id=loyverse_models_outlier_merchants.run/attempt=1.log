@@ -1,0 +1,78 @@
+[2023-03-06T04:22:04.044+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:871: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti: TaskInstance | None = qry.with_for_update().one_or_none()
+
+[2023-03-06T04:22:04.065+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dbt_marts_loyverse_models.loyverse_models_outlier_merchants.run scheduled__2023-03-05T04:20:00+00:00 [queued]>
+[2023-03-06T04:22:04.078+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dbt_marts_loyverse_models.loyverse_models_outlier_merchants.run scheduled__2023-03-05T04:20:00+00:00 [queued]>
+[2023-03-06T04:22:04.079+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-06T04:22:04.079+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-03-06T04:22:04.079+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-06T04:22:04.101+0000] {taskinstance.py:1383} INFO - Executing <Task(DbtRunOperator): loyverse_models_outlier_merchants.run> on 2023-03-05 04:20:00+00:00
+[2023-03-06T04:22:04.110+0000] {standard_task_runner.py:54} INFO - Started process 257540 to run task
+[2023-03-06T04:22:04.113+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_marts_loyverse_models', 'loyverse_models_outlier_merchants.run', 'scheduled__2023-03-05T04:20:00+00:00', '--job-id', '1673767', '--raw', '--subdir', 'DAGS_FOLDER/engineering/dbt/dbt_marts_loyverse_models.py', '--cfg-path', '/tmp/tmp9xv6787c']
+[2023-03-06T04:22:04.114+0000] {standard_task_runner.py:83} INFO - Job 1673767: Subtask loyverse_models_outlier_merchants.run
+[2023-03-06T04:22:04.114+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/engineering/dbt/dbt_marts_loyverse_models.py
+[2023-03-06T04:22:04.126+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/hooks/dbt_hook.py:7: DeprecationWarning: The `airflow.hooks.base_hook.BaseHook` class is deprecated. Please use `'airflow.hooks.base.BaseHook'`.
+  from airflow.hooks.base_hook import BaseHook
+
+[2023-03-06T04:22:04.127+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/operators/dbt_operator.py:6: RemovedInAirflow3Warning: This decorator is deprecated. 
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the `default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+
+  class DbtBaseOperator(BaseOperator):
+
+[2023-03-06T04:22:04.127+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow_dbt/operators/__init__.py:1: RemovedInAirflow3Warning: This decorator is deprecated. 
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the `default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+
+  from .dbt_operator import (
+
+[2023-03-06T04:22:04.130+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py:3393: RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead. 
+  with DAG(
+
+[2023-03-06T04:22:04.261+0000] {task_command.py:384} INFO - Running <TaskInstance: dbt_marts_loyverse_models.loyverse_models_outlier_merchants.run scheduled__2023-03-05T04:20:00+00:00 [running]> on host saltdata-platform-airflow-data-prd-eu-west-1-worker-68b9976gwwd
+[2023-03-06T04:22:04.265+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:873: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti = qry.one_or_none()
+
+[2023-03-06T04:22:04.349+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=AnalyticsEngineers
+AIRFLOW_CTX_DAG_ID=dbt_marts_loyverse_models
+AIRFLOW_CTX_TASK_ID=loyverse_models_outlier_merchants.run
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-05T04:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-05T04:20:00+00:00
+[2023-03-06T04:22:04.350+0000] {dbt_hook.py:128} INFO - /home/airflow/.local/bin/dbt run --profiles-dir /opt/airflow/dags/artifacts/dbt/profiles --models loyverse_models_outlier_merchants
+[2023-03-06T04:22:04.368+0000] {dbt_hook.py:138} INFO - Output:
+[2023-03-06T04:22:07.358+0000] {dbt_hook.py:142} INFO - [0m04:22:07  Running with dbt=1.2.4
+[2023-03-06T04:22:09.031+0000] {dbt_hook.py:142} INFO - [0m04:22:09  Found 2151 models, 949 tests, 0 snapshots, 0 analyses, 285 macros, 1 operation, 0 seed files, 1836 sources, 0 exposures, 0 metrics
+[2023-03-06T04:22:09.112+0000] {dbt_hook.py:142} INFO - [0m04:22:09
+[2023-03-06T04:22:09.335+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:873: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti = qry.one_or_none()
+
+[2023-03-06T04:22:12.730+0000] {dbt_hook.py:142} INFO - [0m04:22:12
+[2023-03-06T04:22:12.731+0000] {dbt_hook.py:142} INFO - [0m04:22:12  Running 1 on-run-start hook
+[2023-03-06T04:22:12.737+0000] {dbt_hook.py:142} INFO - [0m04:22:12  1 of 1 START hook: saltdata_dbt.on-run-start.0 ................................. [RUN]
+[2023-03-06T04:22:13.158+0000] {dbt_hook.py:142} INFO - [0m04:22:13  1 of 1 OK hook: saltdata_dbt.on-run-start.0 .................................... [[32mSUCCESS 1[0m in 0.42s]
+[2023-03-06T04:22:13.158+0000] {dbt_hook.py:142} INFO - [0m04:22:13
+[2023-03-06T04:22:13.220+0000] {dbt_hook.py:142} INFO - [0m04:22:13  Concurrency: 4 threads (target='prd')
+[2023-03-06T04:22:13.220+0000] {dbt_hook.py:142} INFO - [0m04:22:13
+[2023-03-06T04:22:13.235+0000] {dbt_hook.py:142} INFO - [0m04:22:13  1 of 1 START table model MARTS.loyverse_models_outlier_merchants ............... [RUN]
+[2023-03-06T04:22:31.965+0000] {dbt_hook.py:142} INFO - [0m04:22:31  1 of 1 OK created table model MARTS.loyverse_models_outlier_merchants .......... [[32mSUCCESS 1[0m in 18.73s]
+[2023-03-06T04:22:31.969+0000] {dbt_hook.py:142} INFO - [0m04:22:31
+[2023-03-06T04:22:31.969+0000] {dbt_hook.py:142} INFO - [0m04:22:31  Finished running 1 table model, 1 hook in 0 hours 0 minutes and 22.86 seconds (22.86s).
+[2023-03-06T04:22:31.970+0000] {dbt_hook.py:142} INFO - [0m04:22:31
+[2023-03-06T04:22:31.970+0000] {dbt_hook.py:142} INFO - [0m04:22:31  [32mCompleted successfully[0m
+[2023-03-06T04:22:31.970+0000] {dbt_hook.py:142} INFO - [0m04:22:31
+[2023-03-06T04:22:31.970+0000] {dbt_hook.py:142} INFO - [0m04:22:31  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2023-03-06T04:22:32.634+0000] {dbt_hook.py:144} INFO - Command exited with return code 0
+[2023-03-06T04:22:32.668+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py:871: SAWarning: TypeDecorator ExecutorConfigType() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  ti: TaskInstance | None = qry.with_for_update().one_or_none()
+
+[2023-03-06T04:22:32.676+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=dbt_marts_loyverse_models, task_id=loyverse_models_outlier_merchants.run, execution_date=20230305T042000, start_date=20230306T042204, end_date=20230306T042232
+[2023-03-06T04:22:32.732+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-03-06T04:22:32.777+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
